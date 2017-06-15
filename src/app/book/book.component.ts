@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {BookService} from "../book.service";
+import {Book} from "../book";
 
 @Component({
     selector: 'app-book',
@@ -9,26 +10,8 @@ import {BookService} from "../book.service";
 export class BookComponent implements OnInit {
 
     books = [
-        {
-            "title": "The Shawshank Redemption",
-            "rank": "1",
-            "id": "tt0111161"
-        },
-        {
-            "title": "The Godfather",
-            "rank": "2",
-            "id": "tt0068646"
-        },
-        {
-            "title": "The Godfather: Part II",
-            "rank": "3",
-            "id": "tt0071562"
-        },
-        {
-            "title": "Pulp Fiction",
-            "rank": "4",
-            "id": "tt0110912"
-        }
+        new Book("The Shawshank Redemption","1","tt0111161"),
+        new Book("The Godfather: Part II","3","tt0071562"),
     ];
 
     constructor(private bookService : BookService) { }
