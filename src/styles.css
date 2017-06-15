@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #e9ebee;
+    color: #1d2129;
+    position: relative;
+}
+.main-wraper{
+    position: relative;
+    display: block;
+}
+.banner-area{
+    background-image: url('./assets/book-3.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.btn {
+    border: 0px !important;
+    border-radius: 0px !important;
+    padding: 5px 15px;
+    font-size: 12px;
+    min-height: 30px;
+    cursor: pointer;
+}
+.btn-save,.btn-save:hover,.btn-save:focus{
+    background-color: rgba(3,169,244,1);
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    border: 0px !important;
+    border-radius: 0px !important;
+    box-shadow: 0 4px 6px rgba(50,50,93,.3), 0 1px 3px rgba(0,0,0,.3);
+}
+.btn i{
+    margin: 0 7px;
+    font-size: 18px;
+}
+.btn-danger,.btn-danger:hover,.btn-danger:focus {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d9534f;
+    border: 0px !important;
+    border-radius: 0px !important;
+    box-shadow: 0 4px 6px rgba(50,50,93,.3), 0 1px 3px rgba(0,0,0,.3);
+}
+
+.alert-crud{
+    margin-top: 20px;
+    border: 0px;
+    border-radius: 0px;
+}

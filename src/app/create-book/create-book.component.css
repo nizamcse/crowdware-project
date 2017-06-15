@@ -1,0 +1,26 @@
+.book-form{
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,.14);
+    padding: 15px;
+    margin-top: 20px;
+    position: relative;
+}
+.close-component-button{
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: red;
+    font-size: 24px;
+    cursor: pointer;
+}
+.book-input-form label{
+    display: block;
+}
+.book-input-form .form-control{
+    float: none;
+    width: 100%;
+}

@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="book-form" *ngIf="bookService.getCreateBook()">
+        <span class="close-component-button" (click)="bookService.cancelCreateBook()"><i class="ion-ios-close-empty"></i></span>
+        <div class="book-form-area">
+            <h5>Add New Book</h5>
+            <hr>
+            <form action="#" class="book-input-form">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Book Title</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Title">
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Book Rating</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Rating">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-save btn-danger" (click)="bookService.cancelCreateBook()"><i class="ion-ios-close-empty"></i>CANCEL</button>
+                    <button class="btn btn-save"><i class="ion-ios-close-outline"></i>SAVE BOOK</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
