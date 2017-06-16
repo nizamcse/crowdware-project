@@ -1,0 +1,8 @@
+<div class="container">
+    <div [ngClass]="{'alert-danger' : !bookService.msgStatus,'alert-success': bookService.msgStatus}" class="alert alert-crud alert-dismissible fade show" role="alert" *ngIf="bookService.flasMessage">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" >
+            <span aria-hidden="true">&times;</span>
+        </button>
+        {{ bookService.flasMessage }}
+    </div>
+</div>

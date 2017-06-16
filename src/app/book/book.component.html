@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" *ngIf="!books.length"> No books found</div>
+        <div [ngClass]="{'col-md-12' : bookService.listView,'col-md-4' : !bookService.listView}" *ngFor="let book of books | filter: bookService.getFilterText()">
+            <div class="book-card">
+                <h5>{{ book.title }}</h5>
+                <p><span class="rank">{{ book.rank }}</span> RATINGS</p>
+                <p><span class="rank">{{ book.id }}</span></p>
+                <ul class="action-list">
+                    <li><a href="#" (click)="onDelete(book)"><span class="iconic"><i class="ion-edit"></i></span></a></li>
+                    <li><a href="#" (click)="onDelete(book)"><span class="iconic"><i class="ion-trash-a"></i></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
