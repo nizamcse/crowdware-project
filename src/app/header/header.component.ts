@@ -16,16 +16,16 @@ export class HeaderComponent implements OnInit {
     ngOnInit() {
     }
 
-    onCreateNew(e){
+    onCreateNew(){
         this.bookService.setCreateBook();
         console.log("create");
     }
 
-    onGridView(e){
+    onGridView(){
         this.bookService.gridView();
         console.log("grid");
     }
-    onListView(e){
+    onListView(){
         this.bookService.listViewStyle();
         console.log("list");
     }

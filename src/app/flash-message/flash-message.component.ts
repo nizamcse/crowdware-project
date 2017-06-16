@@ -8,7 +8,7 @@ import {BookService} from "../book.service";
 })
 export class FlashMessageComponent implements OnInit {
 
-    constructor(private bookService: BookService) { }
+    constructor(public bookService: BookService) { }
 
     ngOnInit() {
     }
