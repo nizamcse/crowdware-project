@@ -11,11 +11,16 @@ export class BookComponent implements OnInit {
 
 
     books = [];
-    constructor(private bookService : BookService) { }
+    editItem: number;
+    editTitle:string;
+    editRank:string;
+    constructor(private bookService : BookService) {
+        this.editItem = -1;
+        this.editTitle = "";
+        this.editRank = "";
+    }
 
     ngOnInit() {
-        //console.log(this.bookService.fetchAll());
-        //this.books = this.bookService.getBooks();
         this.bookService.fetchAll().subscribe((books) => {
             this.books = books;
         });
@@ -29,12 +34,24 @@ export class BookComponent implements OnInit {
         }
     }
     onEdit(book){
-        console.log(book);
+        this.bookService.setEditBook();
+        this.editItem = this.books.indexOf(book);
+        this.editTitle = book.title;
+        this.editRank = book.rank;
     }
 
     onAdd(book){
         this.books.unshift(book);
-        console.log(book);
+    }
+
+    onUpdate(){
+        this.books[this.editItem].title = this.editTitle;
+        this.books[this.editItem].rank = this.editRank;
+        this.editItem = -1;
+        this.editTitle = "";
+        this.editRank = "";
+        this.bookService.cancelEditBook();
+        this.bookService.setFlash("Book has been Updated",true);
     }
 
 }

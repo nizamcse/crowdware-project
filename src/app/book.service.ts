@@ -10,6 +10,7 @@ export class BookService {
 
     filterText:string;
     createBook:boolean;
+    editBook:boolean;
     listView: boolean;
     flasMessage: string;
     msgStatus: boolean;
@@ -20,6 +21,7 @@ export class BookService {
 
     constructor(private http: Http) {
         this.createBook = false;
+        this.editBook = false;
         this.listView = false;
         this.filterText = "";
         this.flasMessage = "";
@@ -42,8 +44,20 @@ export class BookService {
         return this.createBook;
     }
 
+    setEditBook(){
+        this.editBook = true;
+    }
+
+    getEditBook(){
+        return this.editBook;
+    }
+
     cancelCreateBook(){
         this.createBook = false;
+    }
+
+    cancelEditBook(){
+        this.editBook = false;
     }
 
     gridView(){
