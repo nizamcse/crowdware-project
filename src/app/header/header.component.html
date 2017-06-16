@@ -6,7 +6,7 @@
                 <div class="col-md-6 col-sm-6 text-right">
                     <form>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="bookTitle" id="book"  placeholder="Keyword..." required>
+                            <input type="text" [(ngModel)]="bookTitle" (keyup)="onChangeInput(bookTitle)" class="form-control" name="bookTitle" id="book"  placeholder="Keyword..." required>
                             <span class="search-icon"><i class="ion-ios-search"></i></span>
                         </div>
                     </form>
