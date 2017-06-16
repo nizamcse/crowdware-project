@@ -14,7 +14,7 @@ export class BookComponent implements OnInit {
     editItem: number;
     editTitle:string;
     editRank:string;
-    constructor(private bookService : BookService) {
+    constructor(public bookService : BookService) {
         this.editItem = -1;
         this.editTitle = "";
         this.editRank = "";

@@ -11,7 +11,7 @@ export class CreateBookComponent implements OnInit {
     boookTitle: string;
     id: string;
     rank: string;
-    constructor(private bookService : BookService) {
+    constructor(public bookService : BookService) {
         this.boookTitle = "";
         this.id = "";
         this.rank = "";
